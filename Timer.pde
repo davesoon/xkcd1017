@@ -6,20 +6,24 @@ class Timer{
   Era[] eras;
   int currentEra;
   
+  Event currentEvent;
+  int previous;
+  int delta;
+  
   Timer(){
     //.61001
-    progress = 0;
+    progress = 1;
     startTime = 0;
     totalTime = 1000 * 60 * 5;
     
     eras = new Era[7];
-    eras[0] = new Recent();
-    eras[1] = new Modern();
-    eras[2] = new Historic();
-    eras[3] = new Ancient();
-    eras[4] = new Prehistoric();
-    eras[5] = new Geologic();
-    eras[6] = new Cosmic();
+    eras[0] = new Recent();//2000 to now
+    eras[1] = new Modern();//1900 to 2000
+    eras[2] = new Historic();//1 to 1900
+    eras[3] = new Ancient();//7000 BC to 1 BC
+    eras[4] = new Prehistoric();//2 mya to 7000 BC
+    eras[5] = new Geologic();//1 bya to 2 mya
+    eras[6] = new Cosmic();//13.7 bya to 1 bya
     currentEra = 0;
   }
   
@@ -28,6 +32,11 @@ class Timer{
       progress = (float)(millis() - startTime) / totalTime;
     else
       progress = 1;
+  }
+  
+  void newEvent(Event event){
+    previous = millis();
+    currentEvent = event;
   }
   
   String printProgress(){
@@ -62,6 +71,26 @@ class Timer{
       }
       text(eras[currentEra].printDate(progress), 120, 40);
     }
+    
+    renderEvent();
+  }
+  
+  void renderEvent(){
+    if(currentEvent == null)
+      return;
+    
+    
+    delta = millis() - previous;
+    
+    if((float)delta / 20.0 > 255){
+      currentEvent = null;
+      return;
+    }
+    
+    fill((float)delta / 20.0);
+    textSize(15);
+    //text(currentEvent.description, 15, 55, 270, 80);
+    text("1234567890123456789012345678", 15, 55, 270, 80);//1 line = 28 char
   }
 }
 

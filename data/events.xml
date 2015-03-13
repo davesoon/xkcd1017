@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Eras:
+0: 2000 - now
+1: 1900 - 2000
+2: 1 - 1900
+3: 7000 BC - 1 BC
+4: 2,000,000 years ago - 7,000 years ago
+5: 1,000 mya (1 bya) - 2 mya
+6: 13.7 bya - 1 bya
+-->
+<!-- DISCLAIMER
+-Most of this information was found on Wikipedia
+-Some dates are approximate
+-->
+<history>
+	<event era="0" time="2015.1885">This program was created</event>
+	<event era="0" time="2014.8633">Rosetta lands on comet 67P</event>
+	<event era="0" time="2013.9">An Ebola epidemic starts in West Africa, killing thousands</event>
+	<event era="0" time="2013.8">>Russia annexes Crimea</event>
+	<event era="0" time="2013.49">Egyptian protesters stage a coup d'etat</event>
+	<event era="0" time="2013.5492">Studio Ghibli's The Wind Rises hits theaters</event>
+	<event era="0" time="2013.3825">Yahoo buys Tumblr</event>
+	<event era="0" time="2012.8087">Microsoft releases Windows 8</event>
+	<event era="0" time="2011.7595">Steve Jobs dies</event>
+	<event era="0" time="2011.5">The world population reaches 7 billion</event>
+	<event era="0" time="2011.3610">Osama bin Laden is killed</event>
+	<event era="0" time="2010.3">A 7.0 earthquake hits Port-au-Prince, Hati</event>
+	<event era="0" time="2008.68">Obama elected President</event>
+	<event era="0" time="2005.64">Hurricane Katrina kills 2000 people</event>
+	<event era="0" time="2001.3938">Terrorists destroy the World Trade Center</event>
+	
+	<event era="1" time="1999.5">The Eurozone introduces the Euro</event>
+	<event era="1" time="1999">World population hits 6 billion</event>
+	<event era="1" time="1998.67">Google is founded</event>
+	<event era="1" time="1995.0628">OJ Simpson found not guilty</event>
+	<event era="1" time="1995.6468">Windows 95 released</event>
+	<event era="1" time="1990">Sir Tim Berners-Lee invents the World Wide Web</event>
+	<event era="1" time="1989">Berlin Wall falls</event>
+	<event era="1" time="1987">World population hits 5 billion</event>
+	<event era="1" time="1975">Vietnam War ends</event>
+	<event era="1" time="1974.5">Steve Wozniak and Steve Jobs start Apple Computer</event>
+	<event era="1" time="1974">World population hits 4 billion</event>
+	<event era="1" time="1969">Neil Armstrong and Buzz Aldrin land on the moon</event>
+	<event era="1" time="1957">World population hits 3 billion</event>
+	<event era="1" time="1957">Sputnik 1 is launched, Space Race starts</event>
+	<event era="1" time="1949">NATO is founded, Cold War begins</event>
+	<event era="1" time="1945">WWII ends, The United Nations is founded</event>
+	<event era="1" time="1937">Japan invades Manchuria, World War 2 starts</event>
+	<event era="1" time="1933">Hitler rises to power</event>
+	<event era="1" time="1929">The Great Depression begins with the Stock Market Crash of '29</event>
+	<event era="1" time="1928">Alexander Fleming discovers Penicillin</event>
+	<event era="1" time="1927">World population hits 2 billion</event>
+	<event era="1" time="1918">WWI ends; Ottoman Empire falls; Russian Revolution begins</event>
+	<event era="1" time="1914">Archduke Franz Ferdinand assassinated, World War I starts</event>
+	<event era="1" time="1912">Last Cinese dynasty falls, Republic of China founded</event>
+
+	<!-- Ugh... this is going to take forever-->
+		<event era="2" time="1899">David gives up on typing these</event>
+	<event era="2" time="1804">World population hits 1,billion</event>
+		<event era="2" time="1530">David starts trying again</event>
+	<event era="2" time="1517">Martin Luther posts his 95 theses</event>
+	<event era="2" time="1512">Copernicus outlines his heliocentric solar system</event>
+	<event era="2" time="1511">Machiavelli writes The Prince</event>
+	<event era="2" time="1510">Michelangelo paints the Sistine Chapel ceiling</event>
+	<event era="2" time="1503">Leonardo da Vinci paints the Mona Lisa</event>
+	<event era="2" time="1494">Age of Exploration begins</event>
+	<event era="2" time="1492">1492, Columbus sails the ocean blue</event>
+	<event era="2" time="1453.5">Ottomans conquer Constantinople</event>
+	<event era="2" time="1453">The Hundred Years' War ends</event>
+	<event era="2" time="1439">Johannes Gutenberg creates the printing press</event>
+	<event era="2" time="1429">Joan of Arc breaks the seige at Orleans</event>
+	<event era="2" time="1405">Zheng He leads the Chinese Navy in an expedition of south-east Asia</event>
+	<event era="2" time="1381.5">Chauncer writes the Canterbury Tales</event>
+	<event era="2" time="1381">John Wycliffe translates the Bible into English</event>
+	<event era="2" time="1347">The Black Plague kills a third of Europeans</event>
+	<event era="2" time="1337">The Hundred Years' War begins between France and England</event>
+	<event era="2" time="1325">The Aztecs found Tenochtitlan</event>
+	<event era="2" time="1310">Dante writes the Divine Comedy</event>
+	<event era="2" time="1299">Osman I founds the Ottoman Empire</event>
+	<event era="2" time="1269">Marco Polo travels to Asia</event>
+	<event era="2" time="1227">Genghis Khan dies</event>
+	<event era="2" time="1215">John of England seals the Magna Carta</event>
+	<event era="2" time="1148">Second Crusade occurs</event>
+	<event era="2" time="1099">Pope Urban II takes Jerusalem in the First Crusade</event>
+	<event era="2" time="1096">Oxford Univesity is established</event>
+	<event era="2" time="1066">William the Conqueror becomes English King</event>
+	<event era="2" time="1050">Astrolabe is used in navigation</event>
+	<event era="2" time="900">Mayan Empire Falls</event>
+	<event era="2" time="768">Charlemagne's reign begins</event>
+	<event era="2" time="570">Prophet Muhammed is born</event>
+	<event era="2" time="476">Romulus Abdicates, Western Roman Empire falls</event>
+	<event era="2" time="330">Constantine becomes Roman Emperor and legalizes Christianity</event>
+	<event era="2" time="285">Dioclecian divides Rome into Eastern and Western Empires</event>
+	<event era="2" time="220">China's Three Kingdoms period starts</event>
+	<event era="2" time="126">Rome's Pantheon is finished</event>
+	<event era="2" time="79">Mt Vesuvius erupts, destroying Pompeii</event>
+	<event era="2" time="30">Jesus is crucified</event>
+
+	<event era="3" time="4">Jesus Christ is born</event>
+	<event era="3" time="27">Rome becomes an Empire</event>
+	<event era="3" time="44">Julius Caesar is killed, Rome becomes a Republic</event>
+	<event era="3" time="130">Rome conqers Greece, Turkey</event>
+	<event era="3" time="147">Rome destroys Carthage in the 3rd Punic War</event>
+	<event era="3" time="221.5">Construction on the Great Wall of China begins</event>
+	<event era="3" time="221">China is unified under Qin Shi Huang's Qin Dynasty</event>
+	<event era="3" time="423">Parthenon is built in Athens</event>
+	<event era="3" time="500">Euclid writes Elements</event>
+	<event era="3" time="509">Rome becomes a republic</event>
+	<event era="3" time="539">Babylonian Empire falls</event>
+	<event era="3" time="551">Confucius is born</event>
+	<event era="3" time="660">Jimmu becomes the first emperor of Japan</event>
+	<event era="3" time="753">Rome is founded</event>
+	<event era="3" time="890">Rise of Greek city-states; Illiad and Oddyssey written</event>
+	<event era="3" time="1100">Use of iron spreads</event>
+	<event era="3" time="2100">First Chinese dynasty, Xia dynasty, is created</event>
+	<event era="3" time="2200">Stonehenge completed</event>
+	<event era="3" time="2500">Mamoths go extinct</event>
+	<event era="3" time="2600">Oldest surviving literature written; Mayan Civilization begins</event>
+	<event era="3" time="2700">Old Kingdom begins in Egypt</event>
+	<event era="3" time="2800">Indus Valley Civilization begins</event>
+	<event era="3" time="3000">Stonehenge is built</event>
+	<event era="3" time="3500">Egyptian calendar created</event>
+	<event era="3" time="3700">Cuneiform appears in Mesopotamia</event>
+	<event era="3" time="6000">First Civilizations develop</event>
+	
+	<event era="4" time="10000">The Agricultural Revolution occurs</event>
+	<event era="4" time="14000">Le Tuc d'Audoubert cave paintings are painted</event>
+	<event era="4" time="35000">The world population hits 3,000,000</event>
+	<event era="4" time="60000">Humans move out of Africa</event>
+	<event era="4" time="200000">Homo Sapiens appear in Africa</event>
+	<event era="4" time="400000">Humans fist use fire</event>
+	<event era="4" time="600000">Humans become hunter-gatherers</event>
+	<event era="4" time="2000000">Early humans adopt tools</event>
+
+	<event era="5" time="2.1">First humans appear</event>
+	<event era="5" time="2.5">Latest ice age begins</event>
+	<event era="5" time="20">Great apes evolve</event>
+	<event era="5" time="60">Primates evolve</event>
+	<event era="5" time="65">Dinosaurs go extinct</event>
+	<event era="5" time="130">Flowers evolve</event>
+	<event era="5" time="150">Birds evolve</event>
+	<event era="5" time="200">Mamals evolve</event>
+	<event era="5" time="230">Dinosaurs appear</event>
+	<event era="5" time="300">Pangea forms</event>
+	<event era="5" time="301">Reptiles evolve</event>
+	<event era="5" time="360">Amphibians evolve</event>
+	<event era="5" time="380">Vertebrate land animals first appear</event>
+	<event era="5" time="400">Insects evolve</event>
+	<event era="5" time="475">Fist land plants evolve</event>
+	<event era="5" time="500">Fish evolve</event>
+	<event era="5" time="530">Cambrian Explosion occurs</event>
+	<event era="5" time="600">Simple animals evolve</event>
+	<event era="5" time="1000">Multicellular life evolves</event>
+	<event era="5" time="2000">Eukaryotes evolve</event>
+	<event era="5" time="2300">Atmosphere fills with oxygen</event>
+	<event era="5" time="3500">Photosynthesis begins</event>
+	<event era="5" time="3600">Prokaryotes evolve</event>
+	<event era="5" time="400">First life appears on Earth</event>
+	
+	<event era="6" time="4.527">Moon forms</event>
+	<event era="6" time="4.55">Earth forms</event>
+	<event era="6" time="4.6">Milky Way starts to form</event>
+	<event era="6" time="12">Quasars form</event>
+	<event era="6" time="13">Fist galaxies form</event>
+	<event era="6" time="13.6">Big Bang - Universe is created; First stars start to shine</event>
+</history>
+<!-- era 0-2 needs to have time of day after-->
