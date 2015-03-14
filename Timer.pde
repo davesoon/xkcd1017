@@ -10,11 +10,13 @@ class Timer{
   int previous;
   int delta;
   
+  EventQueue queue;
+  
   Timer(){
     //.61001
-    progress = 1;
+    progress = 0;
     startTime = 0;
-    totalTime = 1000 * 60 * 5;
+    totalTime = 1000 * 60 * 2;
     
     eras = new Era[7];
     eras[0] = new Recent();//2000 to now
@@ -25,6 +27,8 @@ class Timer{
     eras[5] = new Geologic();//1 bya to 2 mya
     eras[6] = new Cosmic();//13.7 bya to 1 bya
     currentEra = 0;
+    
+    queue = new EventQueue();
   }
   
   void update(){
@@ -35,8 +39,10 @@ class Timer{
   }
   
   void newEvent(Event event){
-    previous = millis();
-    currentEvent = event;
+    //previous = millis();
+    //currentEvent = event;
+    
+    queue.addEvent(event);
   }
   
   String printProgress(){
@@ -72,7 +78,8 @@ class Timer{
       text(eras[currentEra].printDate(progress), 120, 40);
     }
     
-    renderEvent();
+    //renderEvent();
+    queue.render();
   }
   
   void renderEvent(){
@@ -89,8 +96,9 @@ class Timer{
     
     fill((float)delta / 20.0);
     textSize(15);
-    //text(currentEvent.description, 15, 55, 270, 80);
-    text("1234567890123456789012345678", 15, 55, 270, 80);//1 line = 28 char
+    text(currentEvent.description, 15, 55, 270, 80);
+    //text("A234567890123456789012345678", 15, 55, 270, 80);//1 line = 28 char, total 3 lines
+    
   }
 }
 

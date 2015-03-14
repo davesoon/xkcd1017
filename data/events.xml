@@ -15,9 +15,13 @@ Eras:
 -->
 <history>
 	<event era="0" time="2015.1885">This program was created</event>
+	<event era="0" time="2015.185">Test 1</event>
+	<event era="0" time="2015.180">Test 2</event>
+	<event era="0" time="2015.175">Test 3</event>
+	<event era="0" time="2015.1748">Lenard Nemoy dies</event>
 	<event era="0" time="2014.8633">Rosetta lands on comet 67P</event>
 	<event era="0" time="2013.9">An Ebola epidemic starts in West Africa, killing thousands</event>
-	<event era="0" time="2013.8">>Russia annexes Crimea</event>
+	<event era="0" time="2013.8">Russia annexes Crimea</event>
 	<event era="0" time="2013.49">Egyptian protesters stage a coup d'etat</event>
 	<event era="0" time="2013.5492">Studio Ghibli's The Wind Rises hits theaters</event>
 	<event era="0" time="2013.3825">Yahoo buys Tumblr</event>
@@ -57,7 +61,7 @@ Eras:
 
 	<!-- Ugh... this is going to take forever-->
 		<event era="2" time="1899">David gives up on typing these</event>
-	<event era="2" time="1804">World population hits 1,billion</event>
+	<event era="2" time="1804">World population hits 1 billion</event>
 		<event era="2" time="1530">David starts trying again</event>
 	<event era="2" time="1517">Martin Luther posts his 95 theses</event>
 	<event era="2" time="1512">Copernicus outlines his heliocentric solar system</event>
@@ -124,15 +128,15 @@ Eras:
 	<event era="3" time="3700">Cuneiform appears in Mesopotamia</event>
 	<event era="3" time="6000">First Civilizations develop</event>
 	
-	<event era="4" time="10000">The Agricultural Revolution occurs</event>
-	<event era="4" time="14000">Le Tuc d'Audoubert cave paintings are painted</event>
-	<event era="4" time="35000">The world population hits 3,000,000</event>
-	<event era="4" time="60000">Humans move out of Africa</event>
-	<event era="4" time="200000">Homo Sapiens appear in Africa</event>
-	<event era="4" time="400000">Humans fist use fire</event>
-	<event era="4" time="600000">Humans become hunter-gatherers</event>
-	<event era="4" time="2000000">Early humans adopt tools</event>
-
+	<event era="4" time="10">The Agricultural Revolution occurs</event>
+	<event era="4" time="14">Le Tuc d'Audoubert cave paintings are painted</event>
+	<event era="4" time="35">The world population hits 3,000,000</event>
+	<event era="4" time="60">Humans move out of Africa</event>
+	<event era="4" time="200">Homo Sapiens appear in Africa</event>
+	<event era="4" time="400">Humans fist use fire</event>
+	<event era="4" time="600">Humans become hunter-gatherers</event>
+	
+	<event era="5" time="2">Early humans adopt tools</event>
 	<event era="5" time="2.1">First humans appear</event>
 	<event era="5" time="2.5">Latest ice age begins</event>
 	<event era="5" time="20">Great apes evolve</event>

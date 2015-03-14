@@ -46,7 +46,7 @@ void setup(){
 
 void draw(){
   background(240);
-  //timer.update();
+  timer.update();
   timer.render();
   //println(percentYear(1592, 3, 14));
 }

@@ -145,10 +145,7 @@ class Prehistoric extends Ancient{
     else if(time < 1000){
       output = Float.toString(time).substring(0,3);
     }
-    else if(time < 2000 ){
-      output = Float.toString(time).charAt(0) + "," + Float.toString(time).substring(1,4);
-    }
-    else if(time >= 2000){
+    else if(time >= 1000){
       switchEra();
     }
     
