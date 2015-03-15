@@ -36,6 +36,8 @@ class Timer{
       progress = (float)(millis() - startTime) / totalTime;
     else
       progress = 1;
+      
+    queue.update();
   }
   
   void newEvent(Event event){
@@ -43,6 +45,7 @@ class Timer{
     //currentEvent = event;
     
     queue.addEvent(event);
+    queue.update();
   }
   
   String printProgress(){

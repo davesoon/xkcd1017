@@ -19,6 +19,7 @@ Eras:
 	<event era="0" time="2015.180">Test 2</event>
 	<event era="0" time="2015.175">Test 3</event>
 	<event era="0" time="2015.1748">Lenard Nemoy dies</event>
+	<event era="0" time="2015.173">Test test test! Testity test test! This is a multi-line test !</event>
 	<event era="0" time="2014.8633">Rosetta lands on comet 67P</event>
 	<event era="0" time="2013.9">An Ebola epidemic starts in West Africa, killing thousands</event>
 	<event era="0" time="2013.8">Russia annexes Crimea</event>

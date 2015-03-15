@@ -48,9 +48,11 @@ class EventQueue {
     if(current == null){
       return;
     }
-    
+        
+    textSize(15);
     while(current.getTail () != null) {
-      text(current.main.description, 15, 55 + 20 * lines, 270, 20);
+      text(current.main.description, 15, 55 + 20 * lines, 270, 20 + 18 * current.main.lines);
+      //text(current.main.description, 15, 55, 270, 40);
       lines += current.main.lines;
       current = current.getTail();
     }
@@ -82,25 +84,43 @@ class EventQueue {
       return;
     }
     
+    EventNode e = new EventNode(null, event, top);
+    top.head = e;
+    top = e;
+    
+    length ++;
+    /*
     while(current.getTail() != null) {
       current = current.getTail();
     }
     
     current.addTail(new EventNode(current, event, null));
+    */
   }
 
-  void addNode(EventNode node) {
+
+  void removeNode() {    
     EventNode current = top;
-    while (current.getTail () != null) {
+    
+    if(current == null){
+      length = 0;
+      return;
+    }
+    
+    if(length == 1){
+      top = null;
+      length = 0;
+      return;
+    }
+    
+    while(current.getTail() != null) {
       current = current.getTail();
     }
-
-    current.addTail(node);
-  }
-
-  void removeNode() {
-    top.getTail().head = null;
-    top = null;
+    
+    current = current.getHead();
+    current.tail = null;
+    
+    length --;
   }
 }
 
