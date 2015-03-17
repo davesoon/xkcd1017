@@ -86,21 +86,22 @@ class Timer{
   }
   
   void renderEvent(){
-    if(currentEvent == null)
-      return;
+    //if(currentEvent == null)
+      //return;
     
-    
+    /*
     delta = millis() - previous;
     
     if((float)delta / 20.0 > 255){
       currentEvent = null;
       return;
     }
-    
-    fill((float)delta / 20.0);
+    */
+    //fill((float)delta / 20.0);
+    fill(0);
     textSize(15);
-    text(currentEvent.description, 15, 55, 270, 80);
-    //text("A234567890123456789012345678", 15, 55, 270, 80);//1 line = 28 char, total 3 lines
+    //text(currentEvent.description, 15, 55, 270, 80);
+    text("A234567890123456789012345678", 15, 55, 270, 80);//1 line = 28 char, total 3 lines
     
   }
 }

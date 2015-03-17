@@ -16,7 +16,9 @@ class Event {
     this.description = message;
 
     this.lines = ceil((float)description.length() / 28.0);
+    //println("Test test test! Testity test test! This is a multi-line test !".length());
   }
+  
 }
 
 class EventQueue {
@@ -51,11 +53,13 @@ class EventQueue {
         
     textSize(15);
     while(current.getTail () != null) {
-      text(current.main.description, 15, 55 + 20 * lines, 270, 20 + 18 * current.main.lines);
+      current.render(55 + lines * 20);
       //text(current.main.description, 15, 55, 270, 40);
       lines += current.main.lines;
       current = current.getTail();
     }
+    
+    text(lines, 280, 150);
   }
 
   void update() {
@@ -117,10 +121,11 @@ class EventQueue {
       current = current.getTail();
     }
     
+    length --;
+    
     current = current.getHead();
     current.tail = null;
     
-    length --;
   }
 }
 
@@ -130,41 +135,59 @@ class EventNode {
   EventNode tail;
 
   int previous;
-  String lines[];
+  ArrayList<String> texts;
 
   EventNode() {
     println("wut");
-    previous = millis();
+    texts = new ArrayList();
+    doTheLineThingIGuess();
   }
 
   EventNode(Event main) {
     head = null;
     this.main = main;
     tail = null;
-    previous = millis();
+    texts = new ArrayList();
+    doTheLineThingIGuess();
   }
 
   EventNode(EventNode head, Event main, EventNode tail) {
     this.head = head;
     this.main = main;
     this.tail = tail;
-    previous = millis();
+    texts = new ArrayList();
+    doTheLineThingIGuess();
   }
   
+  
   void doTheLineThingIGuess(){
-    l = main.description;
-    if(l.length() <= 28){
-      lines[] = new String[1];
-      lines[0] = description
+    int linenum = 1;
+    String l = main.description;
+    char[] letters = l.toCharArray();
+    
+    textSize(15);
+    
+    String temp = new String();
+    for(int i = 0; i < letters.length; i ++){
+      temp = temp + letters[i];
+      if(textWidth(temp) >= 270){
+        texts.add(temp);
+        println(temp);
+        temp = new String();
+        linenum ++;
+      }
     }
+    texts.add(temp);
   }
   
   void update(){
-    delta = millis() - previous;
+    //delta = millis() - previous;
   }
   
-  void render(int x, int y){
-    
+  void render(int y){
+    for(int i = 0; i < texts.size(); i ++){
+      text(texts.get(i), 15, y + 20 * i, 270, 20 + 20 * i);
+    }
   }
 
   EventNode getHead() {
