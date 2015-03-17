@@ -130,25 +130,41 @@ class EventNode {
   EventNode tail;
 
   int previous;
-  float alpha;
+  String lines[];
 
   EventNode() {
     println("wut");
-  }
-
-  void update() {
+    previous = millis();
   }
 
   EventNode(Event main) {
     head = null;
     this.main = main;
     tail = null;
+    previous = millis();
   }
 
   EventNode(EventNode head, Event main, EventNode tail) {
     this.head = head;
     this.main = main;
     this.tail = tail;
+    previous = millis();
+  }
+  
+  void doTheLineThingIGuess(){
+    l = main.description;
+    if(l.length() <= 28){
+      lines[] = new String[1];
+      lines[0] = description
+    }
+  }
+  
+  void update(){
+    delta = millis() - previous;
+  }
+  
+  void render(int x, int y){
+    
   }
 
   EventNode getHead() {
