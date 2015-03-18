@@ -15,7 +15,6 @@ class Event {
     this.time = time;
     this.description = message;
 
-    this.lines = ceil((float)description.length() / 28.0);
     //println("Test test test! Testity test test! This is a multi-line test !".length());
   }
   
@@ -24,15 +23,23 @@ class Event {
 class EventQueue {
   EventNode top;
   int length;
+  int buffer;
+  boolean isAdding;
 
   EventQueue() {
     top = null;
     length = 0;
+    buffer = 0;
+    
+    isAdding = false;
   }
 
   EventQueue(EventNode node) {
     top = node;
     length = 1;
+    buffer = 0;
+    
+    isAdding = false;
   }
 
   void render() {
@@ -53,9 +60,9 @@ class EventQueue {
         
     textSize(15);
     while(current.getTail () != null) {
-      current.render(55 + lines * 20);
+      current.render(55 + lines * 20 + buffer);
       //text(current.main.description, 15, 55, 270, 40);
-      lines += current.main.lines;
+      lines += current.linenum;
       current = current.getTail();
     }
     
@@ -66,19 +73,27 @@ class EventQueue {
     int lines = 0;
     EventNode current = top;
     
+    if(isAdding){
+      buffer += 5;
+    }
+    
     if(current == null)
       return;
     
     while(current.getTail () != null) {
-      lines += current.main.lines;
+      lines += current.linenum;
       current.update();
 
       current = current.getTail();
     }
 
-    if (lines > 3) {
+    if (lines > 3){
       removeNode();
     }
+  }
+  
+  void queueEvent(Event event){
+    isAdding = true;
   }
 
   void addEvent(Event event) {
@@ -100,6 +115,19 @@ class EventQueue {
     
     current.addTail(new EventNode(current, event, null));
     */
+  }
+  
+  void addNode(EventNode node){
+    length ++;
+    
+    if(top == null){
+      node = top;
+      return;
+    }
+    
+    node.tail = top;
+    top.head = node;
+    node = top;
   }
 
 
@@ -135,12 +163,14 @@ class EventNode {
   EventNode tail;
 
   int previous;
+  int linenum;
   ArrayList<String> texts;
 
   EventNode() {
     println("wut");
     texts = new ArrayList();
     doTheLineThingIGuess();
+    previous = millis();
   }
 
   EventNode(Event main) {
@@ -149,6 +179,7 @@ class EventNode {
     tail = null;
     texts = new ArrayList();
     doTheLineThingIGuess();
+    previous = millis();
   }
 
   EventNode(EventNode head, Event main, EventNode tail) {
@@ -156,6 +187,7 @@ class EventNode {
     this.main = main;
     this.tail = tail;
     texts = new ArrayList();
+    previous = millis();
     doTheLineThingIGuess();
   }
   
@@ -166,18 +198,23 @@ class EventNode {
     char[] letters = l.toCharArray();
     
     textSize(15);
+    int lastspace = 0;
     
     String temp = new String();
     for(int i = 0; i < letters.length; i ++){
-      temp = temp + letters[i];
-      if(textWidth(temp) >= 270){
-        texts.add(temp);
-        println(temp);
-        temp = new String();
+      if(textWidth(temp) >= 260){
+        texts.add(temp.substring(0, lastspace));
+        //println(temp);
+        temp = temp.substring(lastspace + 1, temp.length());
         linenum ++;
       }
+      temp = temp + letters[i];
+      if(letters[i] == ' ')
+        lastspace = i;
     }
     texts.add(temp);
+    
+    this.linenum = linenum;
   }
   
   void update(){
