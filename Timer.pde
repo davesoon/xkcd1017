@@ -45,6 +45,7 @@ class Timer{
     //currentEvent = event;
     
     queue.addEvent(event);
+    //queue.queueEvent(event);
     queue.update();
   }
   
@@ -75,10 +76,12 @@ class Timer{
     text(printProgress(), 20, 40);
     
     if(eras[currentEra] != null){
+      text(eras[currentEra].printDate(progress), 120, 40);
       if(eras[currentEra] instanceof Prehistoric){
         textSize(15);
       }
-      text(eras[currentEra].printDate(progress), 120, 40);
+      
+      
     }
     
     //renderEvent();
